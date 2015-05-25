@@ -1,0 +1,21 @@
+#!/bin/sh
+
+## For this script to work, you must install lessc, less-plugin-clean-css and less-plugin-autoprefix
+## You can isntall them  by running: ./less install
+
+INPUT_FILE=src/less/main.less
+OUTPUT_FILE=resources/public/css/style.css
+
+if [ "$1" == "install" ]; then
+    echo "Installing lessc"
+    sudo npm install -g less
+    echo "Installing less-plugin-clean-css"
+    sudo npm install -g less-plugin-clean-css
+    echo "Installing less-plugin-autoprefix"
+    sudo npm install -g less-plugin-autoprefix
+else
+    echo "Compiling less"
+    #lessc --clean-css="--s1 --advanced --compatibility=ie8" --source-map --autoprefix  src/less/base.less resources/public/css/site.css
+    lessc --clean-css="--s1 --compatibility=ie8" --source-map --autoprefix $INPUT_FILE $OUTPUT_FILE 
+fi
+

@@ -1,0 +1,23 @@
+// Blocks
+
+.block {
+    width: @block-size;
+    height: @block-size;
+    float: left;
+    margin:0;
+    padding:0;
+    &.empty {
+        margin: -1px;
+        border: 1px dotted #ddd;
+    }
+    &.red {
+        background-color: #faa;
+    }
+    &.green {
+        background-color: #afa;
+    }
+}
+.row {
+    clear:both;
+}
+

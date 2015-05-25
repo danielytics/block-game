@@ -1,0 +1,2 @@
+.game-board{border:1px solid #ccc;float:left}.score-board{float:left}.block{width:50px;height:50px;float:left;margin:0;padding:0}.block.empty{margin:-1px;border:1px dotted #ddd}.block.red{background-color:#faa}.block.green{background-color:#afa}.row{clear:both}
+/*# sourceMappingURL=style.css.map */
